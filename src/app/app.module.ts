@@ -3,16 +3,17 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { StoreModule } from '@ngrx/store';  
+import { StoreModule } from '@ngrx/store';
 import { reducers } from './store';
-import { CounterComponent } from './components/counter/counter.component'; 
+import { IssuesComponent } from './components/issues/issues.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CounterComponent
+    IssuesComponent
   ],
   imports: [
+    StoreModule.forRoot(reducers),
     BrowserModule,
     AppRoutingModule,
     StoreModule.forRoot(reducers)   //Where we registred the state of application
