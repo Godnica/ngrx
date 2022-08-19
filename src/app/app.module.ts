@@ -6,17 +6,21 @@ import { AppComponent } from './app.component';
 import { StoreModule } from '@ngrx/store';
 import { reducers } from './store';
 import { IssuesComponent } from './components/issues/issues.component';
+import { NewIssueComponent } from './components/new-issue/new-issue.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    IssuesComponent
+    IssuesComponent,
+    NewIssueComponent
   ],
   imports: [
-    StoreModule.forRoot(reducers),
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    StoreModule.forRoot(reducers)
   ],
   providers: [],
   bootstrap: [AppComponent]
