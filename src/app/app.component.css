@@ -1,0 +1,15 @@
+header {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    padding: 0 24px;
+    background-color: white;
+}
+  
+h1 {
+    font-size: 1.8rem;
+    color: red;
+    font-weight: normal;
+}
+  
+  
