@@ -6,8 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { IssuesComponent } from './components/issues/issues.component';
 import { NewIssueComponent } from './components/new-issue/new-issue.component';
-
-import { reducers } from './store';
+import { metaReducers, reducers } from './store';
 
 @NgModule({
   declarations: [AppComponent, IssuesComponent, NewIssueComponent],
@@ -15,7 +14,7 @@ import { reducers } from './store';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    StoreModule.forRoot(reducers)
+    StoreModule.forRoot(reducers, {metaReducers})
   ],
   providers: [],
   bootstrap: [AppComponent],
