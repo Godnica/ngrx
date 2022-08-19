@@ -7,7 +7,6 @@ import { StoreModule } from '@ngrx/store';
 import { reducers } from './store';
 import { IssuesComponent } from './components/issues/issues.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +15,8 @@ import { IssuesComponent } from './components/issues/issues.component';
   imports: [
     StoreModule.forRoot(reducers),
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    StoreModule.forRoot(reducers)   //Where we registred the state of application
   ],
   providers: [],
   bootstrap: [AppComponent]
